@@ -67,6 +67,9 @@ type MessageSchema = {
     a2: string
     q3: string
     a3: string
+    q4: string
+    a4: string
+    githubLink: string
   }
 }
 

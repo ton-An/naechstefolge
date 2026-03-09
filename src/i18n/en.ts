@@ -69,6 +69,9 @@ const en: MessageSchema = {
     a2: 'The data is reloaded on each visit to the page.',
     q3: 'Is this an official website of the ZDF?',
     a3: 'No, this website is not an official offering of the ZDF. It is an open-source project that simplifies access to new episodes in the ZDF media library.',
+    q4: 'Where can I find the source code?',
+    a4: 'The project is open source and available on GitHub.',
+    githubLink: 'View on GitHub',
   },
 }
 

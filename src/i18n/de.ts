@@ -69,6 +69,9 @@ const de: MessageSchema = {
     a2: 'Die Daten werden bei jedem Besuch der Seite neu geladen.',
     q3: 'Gehört die Website zum ZDF?',
     a3: 'Nein, diese Website ist kein offizielles Angebot des ZDF. Es handelt sich um ein Open-Source-Projekt, das den Zugriff auf neue Folgen in der Mediathek vereinfachen soll.',
+    q4: 'Wo finde ich den Quellcode?',
+    a4: 'Das Projekt ist Open Source und auf GitHub verfügbar.',
+    githubLink: 'Auf GitHub ansehen',
   },
 }
 
