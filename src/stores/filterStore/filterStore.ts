@@ -151,8 +151,6 @@ function handleSelection(
     }
   }
 
-  console.log('newSelected', newSelected)
-
   return newSelected
 }
 

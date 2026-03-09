@@ -42,6 +42,17 @@ const en: MessageSchema = {
     documentary: 'Documentary',
     report: 'Report',
   },
+  faq: {
+    title: 'Frequently asked questions',
+    description: 'Answers to the most common questions about the app.',
+    openFaq: 'Open FAQ',
+    q1: 'Where does the data come from?',
+    a1: 'Episodes are loaded from the ZDF media library and show the next scheduled broadcasts of documentaries and reports.',
+    q2: 'How often is the data updated?',
+    a2: 'The data is reloaded on each visit to the page. You can adjust filters via categories and genres.',
+    q3: 'Can I add shows to my watchlist?',
+    a3: 'This feature is not currently available. You can visit the ZDF media library directly to save shows.',
+  },
 }
 
 export default en

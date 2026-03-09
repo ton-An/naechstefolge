@@ -3,6 +3,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 import EpisodeCard from '@/components/EpisodeCard.vue'
+import FaqSection from '@/components/FaqSection.vue'
 import FilterHeader from '@/components/FilterHeader.vue'
 import GradientBlob from '@/components/GradientBlob.vue'
 import ZdfLogo from '@/components/ZdfLogo.vue'
@@ -78,6 +79,9 @@ const logoOpacity = computed(() => {
 
   </div>
 
+  <div class="fixed bottom-4 right-4 z-30 md:bottom-auto md:top-4">
+    <FaqSection />
+  </div>
   <div v-if="episodesStore.state.status === 'loading'"></div>
   <div class="px-4 w-full z-10 mt-140 relative">
     <FilterHeader class="sticky top-4 left-0 z-20" />

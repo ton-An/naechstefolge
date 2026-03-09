@@ -40,6 +40,17 @@ type MessageSchema = {
     documentary: string
     report: string
   }
+  faq: {
+    title: string
+    description: string
+    openFaq: string
+    q1: string
+    a1: string
+    q2: string
+    a2: string
+    q3: string
+    a3: string
+  }
 }
 
 export type { MessageSchema }
