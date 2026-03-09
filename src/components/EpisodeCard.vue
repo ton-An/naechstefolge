@@ -32,7 +32,12 @@ const formatDuration = (duration: number) => {
   </div>
 
   <!-- Actual episode card -->
-  <a v-else :href="episode.url" target="_blank">
+  <a
+    v-else
+    :href="episode.url"
+    target="_blank"
+    class="block rounded-2xl focus:outline-2 focus:outline-primary focus:outline-offset-8"
+  >
     <div class="flex flex-col gap-3 w-full">
       <div class="flex justify-between gap-2 relative rounded-2xl shadow-lg overflow-hidden">
         <div

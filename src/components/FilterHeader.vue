@@ -41,13 +41,13 @@ const applyFilters = () => {
       >
         <GenreSelector />
         <button
-          class="bg-orange-500 text-white px-4 py-2 rounded-md min-w-32 flex items-center justify-center gap-2"
+          class="bg-orange-500 text-white px-4 py-2 rounded-lg min-w-32 flex items-center justify-center gap-2 focus:outline-2 focus:outline-primary focus:outline-offset-2"
           v-if="filterStore.state.isModified || episodesStore.state.status === 'loading'"
           @click="applyFilters"
         >
           <LoaderCircle
             v-if="episodesStore.state.status === 'loading'"
-            class="w-4 h-4 animate-spin"
+            class="w-4 h-4 my-1 animate-spin"
             :stroke-width="3"
           />
           <span v-else>

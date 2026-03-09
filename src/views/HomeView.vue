@@ -75,9 +75,9 @@ const logoOpacity = computed(() => {
   </div>
 
   <div v-if="episodesStore.state.status === 'loading'"></div>
-  <div class="px-4 w-full z-5 mt-100 relative">
+  <div class="px-4 w-full z-10 mt-100 relative">
     <FilterHeader class="sticky top-4 left-0 z-20" />
-    <div class="relative z-10 pt-10">
+    <div class="relative z-1 pt-10">
       <div class="flex flex-wrap gap-6 justify-center">
         <template v-if="episodesStore.state.status === 'success'">
           <div
