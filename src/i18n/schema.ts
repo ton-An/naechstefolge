@@ -20,6 +20,7 @@ type MessageSchema = {
     education: string
     entertainment: string
     environment: string
+    fairyTale: string
     fantasy: string
     health: string
     history: string
@@ -48,6 +49,7 @@ type MessageSchema = {
   }
   category: {
     documentary: string
+    movies: string
     report: string
     series: string
   }

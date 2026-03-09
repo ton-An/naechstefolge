@@ -22,6 +22,7 @@ const de: MessageSchema = {
     education: 'Bildung',
     entertainment: 'Unterhaltung',
     environment: 'Umwelt',
+    fairyTale: 'Märchen',
     fantasy: 'Fantasy',
     health: 'Gesundheit',
     history: 'Geschichte',
@@ -50,6 +51,7 @@ const de: MessageSchema = {
   },
   category: {
     documentary: 'Dokumentation',
+    movies: 'Filme',
     report: 'Reportage',
     series: 'Serie',
   },

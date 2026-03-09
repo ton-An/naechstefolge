@@ -21,6 +21,7 @@ import {
   Puzzle,
   Shield,
   Siren,
+  Sparkles,
   Speech,
   Star,
   Theater,
@@ -28,9 +29,9 @@ import {
   Utensils,
   VenusAndMars,
   Volleyball,
+  Wand2,
   Zap,
   Skull,
-  Sparkles,
   Stethoscope,
   Swords,
   Scale,
@@ -236,6 +237,11 @@ const options: Record<string, CustomSelectorOption> = {
     i18nKey: 'genres.horror',
     id: 'horror',
     icon: Skull,
+  },
+  fairyTale: {
+    i18nKey: 'genres.fairyTale',
+    id: 'fairyTale',
+    icon: Wand2,
   },
 }
 
