@@ -54,6 +54,7 @@ type MessageSchema = {
     movies: string
     report: string
     series: string
+    show: string
   }
   faq: {
     title: string

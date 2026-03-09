@@ -56,6 +56,7 @@ const de: MessageSchema = {
     movies: 'Filme',
     report: 'Reportage',
     series: 'Serie',
+    show: 'Show',
   },
   faq: {
     title: 'Häufig gestellte Fragen',

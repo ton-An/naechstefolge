@@ -154,7 +154,7 @@ function handleSelection(
   return newSelected
 }
 
-const categories = ['pub-form-10003', 'pub-form-10004', 'pub-form-10009', 'pub-form-10010', 'pub-form-10013']
+const categories = ['pub-form-10003', 'pub-form-10004', 'pub-form-10009', 'pub-form-10010', 'pub-form-10013', 'pub-form-10055']
 
 const genresOfCategories: Record<string, { id: string; key: string }[]> = {
   'pub-form-10003': [
@@ -362,6 +362,24 @@ const genresOfCategories: Record<string, { id: string; key: string }[]> = {
     { id: 'genre-10287', key: 'satire' },
     { id: 'genre-10021', key: 'fantasy' },
     { id: 'genre-10282', key: 'nature' },
+  ],
+  'pub-form-10055': [
+    { id: 'genre-10088', key: 'entertainment' },
+    { id: 'genre-10018', key: 'comedy' },
+    { id: 'genre-10287', key: 'satire' },
+    { id: 'genre-10296', key: 'knowledge' },
+    { id: 'genre-10023', key: 'society' },
+    { id: 'genre-10032', key: 'music' },
+    { id: 'genre-10026', key: 'cooking' },
+    { id: 'genre-10029', key: 'culture' },
+    { id: 'genre-10017', key: 'education' },
+    { id: 'genre-10290', key: 'sports' },
+    { id: 'genre-10015', key: 'action' },
+    { id: 'genre-10024', key: 'health' },
+    { id: 'genre-10022', key: 'history' },
+    { id: 'genre-10294', key: 'environment' },
+    { id: 'genre-10295', key: 'economy' },
+    { id: 'genre-10030', key: 'fairyTale' },
   ],
   'pub-form-10013': [
     { id: 'genre-10281', key: 'news' },
