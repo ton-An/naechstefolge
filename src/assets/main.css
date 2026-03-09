@@ -14,16 +14,17 @@
   --font-league-gothic: 'League Gothic', sans-serif;
 }
 
+.hero-title {
+  mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 25%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 100% at 50% 50%, black 40%, transparent 90%);
+}
+
 .hero-container-soft-edges {
-  mask-image: radial-gradient(
+  background: radial-gradient(
     ellipse 100% 100% at 50% 50%,
-    black 25%,
-    transparent 75%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 100% 100% at 50% 50%,
-    black 25%,
-    transparent 75%
+    rgba(255, 255, 255, 0.9) 1%,
+    rgba(255, 255, 255, 0.4) 55%,
+    transparent 100%
   );
   box-shadow:
     0 0 80px 30px rgba(255, 255, 255, 0.35),

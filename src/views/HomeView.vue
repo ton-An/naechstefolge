@@ -59,16 +59,16 @@ const logoOpacity = computed(() => {
     <GradientBlob class="absolute top-[50%] left-[50%] size-140 translate-x-[-50%] translate-y-[-50%]" />
 
     <div
-      class="hero-container-soft-edges inline-flex flex-col items-center justify-center gap-2 px-8 py-6 rounded-2xl  backdrop-blur-sm transition-[filter] duration-200 relative"
+      class="hero-container-soft-edges inline-flex flex-col items-center justify-center gap-2 px-8 py-6 rounded-2xl backdrop-blur-sm transition-[filter] duration-200 relative"
       :style="{ filter: logoBlur, opacity: logoOpacity }"
     >
 
       <ZdfLogo
-        class="w-60 relative z-1"
+        class="w-55 relative z-1"
         :style="{ opacity: logoOpacity }"
       />
       <h1
-        class="text-[160px] -mt-30 text-center uppercase font-extrabold transition-opacity duration-200 whitespace-nowrap text-black/90 font-league-gothic leading-tight"
+        class="hero-title text-[160px] -mt-13 text-center uppercase font-extrabold transition-opacity duration-200 whitespace-nowrap text-black/86 font-league-gothic leading-tight"
         :style="{ opacity: titleOpacity }"
       >
         {{ t('common.nextEpisode') }}
