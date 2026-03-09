@@ -62,13 +62,13 @@ const de: MessageSchema = {
   faq: {
     title: 'Häufig gestellte Fragen',
     description: 'Antworten auf die häufigsten Fragen zur App.',
-    openFaq: 'FAQ öffnen',
+    openFaq: 'FAQ',
     q1: 'Woher kommen die Daten?',
-    a1: 'Die Episoden werden von der ZDF-Mediathek geladen und zeigen die nächsten geplanten Ausstrahlungen von Dokumentationen und Reportagen.',
+    a1: 'Die Episoden werden direkt aus der ZDF-Mediathek abgerufen. Die Datenübertragung erfolgt ohne Umwege über externe Server.',
     q2: 'Wie oft werden die Daten aktualisiert?',
-    a2: 'Die Daten werden bei jedem Besuch der Seite neu geladen. Filter können Sie über die Kategorien und Genres anpassen.',
-    q3: 'Kann ich Sendungen zu meiner Merkliste hinzufügen?',
-    a3: 'Diese Funktion ist derzeit nicht verfügbar. Sie können die ZDF-Mediathek direkt besuchen, um Sendungen zu speichern.',
+    a2: 'Die Daten werden bei jedem Besuch der Seite neu geladen.',
+    q3: 'Gehört die Website zum ZDF?',
+    a3: 'Nein, diese Website ist kein offizielles Angebot des ZDF. Es handelt sich um ein Open-Source-Projekt, das den Zugriff auf neue Folgen in der Mediathek vereinfachen soll.',
   },
 }
 

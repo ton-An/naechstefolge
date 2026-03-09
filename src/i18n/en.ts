@@ -64,11 +64,11 @@ const en: MessageSchema = {
     description: 'Answers to the most common questions about the app.',
     openFaq: 'Open FAQ',
     q1: 'Where does the data come from?',
-    a1: 'Episodes are loaded from the ZDF media library and show the next scheduled broadcasts of documentaries and reports.',
+    a1: 'Episodes are loaded directly from the ZDF media library. The data transfer does not go through external servers.',
     q2: 'How often is the data updated?',
-    a2: 'The data is reloaded on each visit to the page. You can adjust filters via categories and genres.',
-    q3: 'Can I add shows to my watchlist?',
-    a3: 'This feature is not currently available. You can visit the ZDF media library directly to save shows.',
+    a2: 'The data is reloaded on each visit to the page.',
+    q3: 'Is this an official website of the ZDF?',
+    a3: 'No, this website is not an official offering of the ZDF. It is an open-source project that simplifies access to new episodes in the ZDF media library.',
   },
 }
 
