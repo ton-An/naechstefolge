@@ -55,27 +55,31 @@ const logoOpacity = computed(() => {
 </script>
 
 <template>
-  <div class="fixed top-25 left-[50%] translate-x-[-50%] -z-10">
-    <GradientBlob
-      class="absolute top-[50%] left-[50%] size-140 translate-x-[-50%] translate-y-[-50%]"
-    />
+  <div class="fixed top-25 left-[50%] translate-x-[-50%] -z-10 flex justify-center">
+    <GradientBlob class="absolute top-[50%] left-[50%] size-140 translate-x-[-50%] translate-y-[-50%]" />
 
     <div
-      class="flex flex-col items-center justify-center transition-[filter] duration-200"
-      :style="{ filter: logoBlur }"
+      class="hero-container-soft-edges inline-flex flex-col items-center justify-center gap-2 px-8 py-6 rounded-2xl  backdrop-blur-sm transition-[filter] duration-200 relative"
+      :style="{ filter: logoBlur, opacity: logoOpacity }"
     >
-      <ZdfLogo class="w-40 h-40 relative" :style="{ opacity: logoOpacity }" />
+
+      <ZdfLogo
+        class="w-60 relative z-1"
+        :style="{ opacity: logoOpacity }"
+      />
       <h1
-        class="text-3xl/11 mt-2 w-96 md:mt-0 md:text-[2.2em] text-center font-bold transition-opacity duration-200"
+        class="text-[160px] -mt-30 text-center uppercase font-extrabold transition-opacity duration-200 whitespace-nowrap text-black/90 font-league-gothic leading-tight"
         :style="{ opacity: titleOpacity }"
       >
-        {{ t('common.yourNextEpisode') }}
+        {{ t('common.nextEpisode') }}
       </h1>
+
     </div>
+
   </div>
 
   <div v-if="episodesStore.state.status === 'loading'"></div>
-  <div class="px-4 w-full z-10 mt-100 relative">
+  <div class="px-4 w-full z-10 mt-140 relative">
     <FilterHeader class="sticky top-4 left-0 z-20" />
     <div class="relative z-1 pt-10">
       <div class="flex flex-wrap gap-6 justify-center">
@@ -89,7 +93,11 @@ const logoOpacity = computed(() => {
           </div>
         </template>
         <template v-else>
-          <div class="w-full sm:w-72" v-for="i in 10" :key="i">
+          <div
+            class="w-full sm:w-72"
+            v-for="i in 10"
+            :key="i"
+          >
             <EpisodeCard :episode="null" />
           </div>
         </template>

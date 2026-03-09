@@ -1,5 +1,31 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'League Gothic';
+  src: url('./LeagueGothic-Regular-VariableFont_wdth.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-primary: oklch(0.71 0.1805 51.13);
+  --font-league-gothic: 'League Gothic', sans-serif;
+}
+
+.hero-container-soft-edges {
+  mask-image: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    black 25%,
+    transparent 75%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    black 25%,
+    transparent 75%
+  );
+  box-shadow:
+    0 0 80px 30px rgba(255, 255, 255, 0.35),
+    0 0 160px 80px rgba(255, 255, 255, 0.2);
 }

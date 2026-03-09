@@ -7,7 +7,7 @@ const en: MessageSchema = {
     apply: 'Apply',
     all: 'All',
     selectCategoriesFirst: 'Select categories first',
-    yourNextEpisode: 'Your next episode',
+    nextEpisode: 'Next episode',
   },
   genres: {
     knowledge: 'Knowledge',
