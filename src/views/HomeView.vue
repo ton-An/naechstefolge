@@ -79,7 +79,7 @@ const logoOpacity = computed(() => {
 
   </div>
 
-  <div class="fixed bottom-4 right-4 z-30 md:bottom-auto md:top-4">
+  <div class="fixed bottom-4 right-4 z-30">
     <FaqSection />
   </div>
   <div v-if="episodesStore.state.status === 'loading'"></div>

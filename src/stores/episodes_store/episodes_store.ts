@@ -91,6 +91,21 @@ async function getEpisodesBatched(queries: { collectionId: string; genre: string
             ...SeasonWithEpisodes
           }
         }
+        ... on SeasonSeriesSmartCollection {
+          seasons(first: 1, offset: 0) {
+            ...SeasonWithEpisodes
+          }
+        }
+        ... on EndlessSeriesSmartCollection {
+          seasons(first: 1, offset: 0) {
+            ...SeasonWithEpisodes
+          }
+        }
+        ... on MiniSeriesSmartCollection {
+          seasons(first: 1, offset: 0) {
+            ...SeasonWithEpisodes
+          }
+        }
       }
     }`,
     )

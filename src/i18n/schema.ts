@@ -8,37 +8,48 @@ type MessageSchema = {
     nextEpisode: string
   }
   genres: {
-    knowledge: string
-    society: string
-    history: string
-    nature: string
-    sports: string
-    politics: string
-    travel: string
+    action: string
+    adventure: string
+    advice: string
+    architecture: string
+    comedy: string
+    comingOfAge: string
+    cooking: string
     culture: string
-    trueCrime: string
+    drama: string
+    education: string
+    entertainment: string
+    environment: string
+    fantasy: string
+    health: string
+    history: string
+    horror: string
+    krimi: string
+    knowledge: string
+    komodie: string
+    medicalFiction: string
+    music: string
+    mystery: string
+    nature: string
     nutrition: string
     economy: string
-    music: string
-    stars: string
-    health: string
-    environment: string
-    education: string
-    architecture: string
+    politics: string
+    romance: string
     royals: string
-    mystery: string
-    drama: string
-    entertainment: string
-    sex: string
-    cooking: string
-    advice: string
-    adventure: string
-    comingOfAge: string
     satire: string
+    scienceFiction: string
+    sex: string
+    society: string
+    stars: string
+    thriller: string
+    travel: string
+    trueCrime: string
+    sports: string
   }
   category: {
     documentary: string
     report: string
+    series: string
   }
   faq: {
     title: string

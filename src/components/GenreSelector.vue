@@ -28,6 +28,13 @@ import {
   Utensils,
   VenusAndMars,
   Volleyball,
+  Zap,
+  Skull,
+  Sparkles,
+  Stethoscope,
+  Swords,
+  Scale,
+  Rocket,
 } from 'lucide-vue-next'
 import { computed, type ComputedRef } from 'vue'
 import { useI18n } from 'vue-i18n'
@@ -179,6 +186,56 @@ const options: Record<string, CustomSelectorOption> = {
     i18nKey: 'genres.comingOfAge',
     id: 'comingOfAge',
     icon: Backpack,
+  },
+  thriller: {
+    i18nKey: 'genres.thriller',
+    id: 'thriller',
+    icon: Zap,
+  },
+  comedy: {
+    i18nKey: 'genres.comedy',
+    id: 'comedy',
+    icon: FerrisWheel,
+  },
+  romance: {
+    i18nKey: 'genres.romance',
+    id: 'romance',
+    icon: Heart,
+  },
+  medicalFiction: {
+    i18nKey: 'genres.medicalFiction',
+    id: 'medicalFiction',
+    icon: Stethoscope,
+  },
+  action: {
+    i18nKey: 'genres.action',
+    id: 'action',
+    icon: Swords,
+  },
+  krimi: {
+    i18nKey: 'genres.krimi',
+    id: 'krimi',
+    icon: Scale,
+  },
+  scienceFiction: {
+    i18nKey: 'genres.scienceFiction',
+    id: 'scienceFiction',
+    icon: Rocket,
+  },
+  fantasy: {
+    i18nKey: 'genres.fantasy',
+    id: 'fantasy',
+    icon: Sparkles,
+  },
+  komodie: {
+    i18nKey: 'genres.komodie',
+    id: 'komodie',
+    icon: Clapperboard,
+  },
+  horror: {
+    i18nKey: 'genres.horror',
+    id: 'horror',
+    icon: Skull,
   },
 }
 

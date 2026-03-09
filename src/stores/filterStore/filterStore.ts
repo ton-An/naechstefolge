@@ -154,7 +154,7 @@ function handleSelection(
   return newSelected
 }
 
-const categories = ['pub-form-10003', 'pub-form-10009']
+const categories = ['pub-form-10003', 'pub-form-10009', 'pub-form-10010']
 
 const genresOfCategories: Record<string, { id: string; key: string }[]> = {
   'pub-form-10003': [
@@ -341,5 +341,27 @@ const genresOfCategories: Record<string, { id: string; key: string }[]> = {
       id: 'genre-10954',
       key: 'comingOfAge',
     },
+  ],
+  'pub-form-10010': [
+    { id: 'genre-10019', key: 'drama' },
+    { id: 'genre-10292', key: 'thriller' },
+    { id: 'genre-10018', key: 'comedy' },
+    { id: 'genre-10955', key: 'romance' },
+    { id: 'genre-10954', key: 'comingOfAge' },
+    { id: 'genre-10280', key: 'mystery' },
+    { id: 'genre-10031', key: 'medicalFiction' },
+    { id: 'genre-10094', key: 'adventure' },
+    { id: 'genre-10015', key: 'action' },
+    { id: 'genre-10028', key: 'krimi' },
+    { id: 'genre-10017', key: 'education' },
+    { id: 'genre-10288', key: 'scienceFiction' },
+    { id: 'genre-10021', key: 'fantasy' },
+    { id: 'genre-10027', key: 'komodie' },
+    { id: 'genre-10289', key: 'sex' },
+    { id: 'genre-10023', key: 'society' },
+    { id: 'genre-10022', key: 'history' },
+    { id: 'genre-10287', key: 'satire' },
+    { id: 'genre-10293', key: 'trueCrime' },
+    { id: 'genre-10025', key: 'horror' },
   ],
 }
