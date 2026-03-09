@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { BookMarked, Clapperboard, Film, List, Newspaper, SearchIcon, Tv } from 'lucide-vue-next'
+import { BookMarked, Clapperboard, Film, List, Newspaper, SearchIcon, Tv, Palette } from 'lucide-vue-next'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -45,6 +45,11 @@ const options: Record<string, CustomSelectorOption> = {
     i18nKey: 'category.show',
     id: 'pub-form-10055',
     icon: Tv,
+  },
+  'genre-10029': {
+    i18nKey: 'category.culture',
+    id: 'genre-10029',
+    icon: Palette,
   },
 }
 

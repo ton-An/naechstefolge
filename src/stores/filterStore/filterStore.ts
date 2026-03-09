@@ -108,14 +108,45 @@ export const useFilterStore = defineStore('filter', {
 
           if (genre) {
             const genreId = genre.id
-            const id = { category: selectedCategoryId, id: genreId }
-            if (!computedSelectedGenres[genreId]) {
-              computedSelectedGenres[genreId] = {
-                ids: [id],
-                key: selectedGenreKey,
+            const isFormatTabsCategory = selectedCategoryId in genresWithFormatTabs
+            const formatTabs =
+              genresWithFormatTabs[genreId] ??
+              (genreId === 'all' && isFormatTabsCategory
+                ? genresWithFormatTabs[selectedCategoryId]
+                : undefined)
+
+            if (formatTabs) {
+              const effectiveGenreId = genreId === 'all' ? 'all' : genreId
+              const key = genreId === 'all' ? 'all' : selectedGenreKey
+              for (const collectionId of formatTabs) {
+                const id = { category: collectionId, id: effectiveGenreId }
+                if (!computedSelectedGenres[key]) {
+                  computedSelectedGenres[key] = {
+                    ids: [id],
+                    key,
+                  }
+                } else if (
+                  !computedSelectedGenres[key].ids.some(
+                    (i) => i.category === id.category && i.id === id.id,
+                  )
+                ) {
+                  computedSelectedGenres[key].ids.push(id)
+                }
               }
             } else {
-              computedSelectedGenres[genreId].ids.push(id)
+              const id = { category: selectedCategoryId, id: genreId }
+              if (!computedSelectedGenres[genreId]) {
+                computedSelectedGenres[genreId] = {
+                  ids: [id],
+                  key: selectedGenreKey,
+                }
+              } else if (
+                !computedSelectedGenres[genreId].ids.some(
+                  (i) => i.category === id.category && i.id === id.id,
+                )
+              ) {
+                computedSelectedGenres[genreId].ids.push(id)
+              }
             }
           }
         }
@@ -154,7 +185,39 @@ function handleSelection(
   return newSelected
 }
 
-const categories = ['pub-form-10003', 'pub-form-10004', 'pub-form-10009', 'pub-form-10010', 'pub-form-10013', 'pub-form-10055']
+const categories = [
+  'pub-form-10003',
+  'pub-form-10004',
+  'pub-form-10009',
+  'pub-form-10010',
+  'pub-form-10013',
+  'pub-form-10055',
+  'genre-10029',
+]
+
+/** Genres that query across multiple format collections (tabs are collection IDs) */
+const genresWithFormatTabs: Record<string, string[]> = {
+  'genre-10029': [
+    'pub-form-10003',
+    'pub-form-10009',
+    'pub-form-10013',
+    'pub-form-10056',
+    'pub-form-10958',
+    'pub-form-10090',
+    'pub-form-10007',
+    'pub-form-10006',
+    'pub-form-10962',
+    'pub-form-10055',
+    'pub-form-10959',
+    'pub-form-10014',
+    'pub-form-10004',
+    'pub-form-10008',
+    'pub-form-10960',
+    'pub-form-10075',
+    'pub-form-10010',
+    'pub-form-10957',
+  ],
+}
 
 const genresOfCategories: Record<string, { id: string; key: string }[]> = {
   'pub-form-10003': [
@@ -400,6 +463,7 @@ const genresOfCategories: Record<string, { id: string; key: string }[]> = {
     { id: 'genre-10022', key: 'history' },
     { id: 'genre-10294', key: 'environment' },
   ],
+  'genre-10029': [{ id: 'genre-10029', key: 'culture' }],
   'pub-form-10010': [
     { id: 'genre-10019', key: 'drama' },
     { id: 'genre-10292', key: 'thriller' },

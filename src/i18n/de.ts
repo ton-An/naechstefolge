@@ -51,6 +51,7 @@ const de: MessageSchema = {
     sports: 'Sport',
   },
   category: {
+    culture: 'Kultur',
     documentary: 'Dokumentation',
     magazine: 'Magazin',
     movies: 'Filme',

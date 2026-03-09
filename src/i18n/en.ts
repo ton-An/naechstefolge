@@ -51,6 +51,7 @@ const en: MessageSchema = {
     sports: 'Sports',
   },
   category: {
+    culture: 'Culture',
     documentary: 'Documentary',
     magazine: 'Magazine',
     movies: 'Movies',

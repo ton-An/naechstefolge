@@ -49,6 +49,7 @@ type MessageSchema = {
     sports: string
   }
   category: {
+    culture: string
     documentary: string
     magazine: string
     movies: string
