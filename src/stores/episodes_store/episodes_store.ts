@@ -37,24 +37,29 @@ export const useEpisodesStore = defineStore('episodes', {
       for (const smartCollection of smartCollections) {
         if ('video' in smartCollection && smartCollection.video) {
           const video = smartCollection.video
-          episodes.push({
-            title: video['title'],
-            visibleFrom: new Date(video['availability']['vod']['visibleFrom']),
-            image: video['teaser']?.['imageWithoutLogo']?.['layouts']?.['dim768X432'] ?? null,
-            duration: video['currentMedia']?.['nodes']?.[0]?.['duration'] ?? 0,
-            url: video['sharingUrl'],
-          })
+          const visibleFrom = video['availability']?.['vod']?.['visibleFrom']
+          if (visibleFrom) {
+            episodes.push({
+              title: video['title'],
+              visibleFrom: new Date(visibleFrom),
+              image: video['teaser']?.['imageWithoutLogo']?.['layouts']?.['dim768X432'] ?? null,
+              duration: video['currentMedia']?.['nodes']?.[0]?.['duration'] ?? 0,
+              url: video['sharingUrl'],
+            })
+          }
         } else if ('seasons' in smartCollection) {
           const seasons = smartCollection['seasons']['nodes']
           if (seasons.length === 0) continue
           const episodesOfSeason = seasons[0]['episodes']['nodes']
 
           for (const episode of episodesOfSeason) {
+            const visibleFrom = episode['availability']?.['vod']?.['visibleFrom']
+            if (!visibleFrom) continue
             episodes.push({
               title: episode['title'],
-              visibleFrom: new Date(episode['availability']['vod']['visibleFrom']),
-              image: episode['teaser']['imageWithoutLogo']?.['layouts']?.['dim768X432'] ?? null,
-              duration: episode['currentMedia']['nodes'][0]['duration'],
+              visibleFrom: new Date(visibleFrom),
+              image: episode['teaser']?.['imageWithoutLogo']?.['layouts']?.['dim768X432'] ?? null,
+              duration: episode['currentMedia']?.['nodes']?.[0]?.['duration'] ?? 0,
               url: episode['sharingUrl'],
             })
           }
@@ -97,6 +102,11 @@ async function getEpisodesBatched(queries: { collectionId: string; genre: string
     }) {
       smartCollections {
         ... on DefaultNoSectionsSmartCollection {
+          seasons(first: 1, offset: 0) {
+            ...SeasonWithEpisodes
+          }
+        }
+        ... on DefaultWithSectionsSmartCollection {
           seasons(first: 1, offset: 0) {
             ...SeasonWithEpisodes
           }

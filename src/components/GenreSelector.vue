@@ -18,6 +18,7 @@ import {
   List,
   MountainSnow,
   Music,
+  Newspaper,
   Puzzle,
   Shield,
   Siren,
@@ -147,6 +148,11 @@ const options: Record<string, CustomSelectorOption> = {
     i18nKey: 'genres.mystery',
     id: 'mystery',
     icon: Puzzle,
+  },
+  news: {
+    i18nKey: 'genres.news',
+    id: 'news',
+    icon: Newspaper,
   },
   drama: {
     i18nKey: 'genres.drama',

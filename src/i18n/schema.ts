@@ -32,6 +32,7 @@ type MessageSchema = {
     music: string
     mystery: string
     nature: string
+    news: string
     nutrition: string
     economy: string
     politics: string
@@ -49,6 +50,7 @@ type MessageSchema = {
   }
   category: {
     documentary: string
+    magazine: string
     movies: string
     report: string
     series: string

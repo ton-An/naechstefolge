@@ -34,6 +34,7 @@ const de: MessageSchema = {
     music: 'Musik',
     mystery: 'Mystery',
     nature: 'Natur',
+    news: 'Nachrichten',
     nutrition: 'Ernährung',
     economy: 'Wirtschaft',
     politics: 'Politik',
@@ -51,6 +52,7 @@ const de: MessageSchema = {
   },
   category: {
     documentary: 'Dokumentation',
+    magazine: 'Magazin',
     movies: 'Filme',
     report: 'Reportage',
     series: 'Serie',

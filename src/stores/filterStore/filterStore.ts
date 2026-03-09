@@ -154,7 +154,7 @@ function handleSelection(
   return newSelected
 }
 
-const categories = ['pub-form-10003', 'pub-form-10004', 'pub-form-10009', 'pub-form-10010']
+const categories = ['pub-form-10003', 'pub-form-10004', 'pub-form-10009', 'pub-form-10010', 'pub-form-10013']
 
 const genresOfCategories: Record<string, { id: string; key: string }[]> = {
   'pub-form-10003': [
@@ -362,6 +362,25 @@ const genresOfCategories: Record<string, { id: string; key: string }[]> = {
     { id: 'genre-10287', key: 'satire' },
     { id: 'genre-10021', key: 'fantasy' },
     { id: 'genre-10282', key: 'nature' },
+  ],
+  'pub-form-10013': [
+    { id: 'genre-10281', key: 'news' },
+    { id: 'genre-10017', key: 'education' },
+    { id: 'genre-10023', key: 'society' },
+    { id: 'genre-10283', key: 'politics' },
+    { id: 'genre-10282', key: 'nature' },
+    { id: 'genre-10029', key: 'culture' },
+    { id: 'genre-10024', key: 'health' },
+    { id: 'genre-10296', key: 'knowledge' },
+    { id: 'genre-10290', key: 'sports' },
+    { id: 'genre-10295', key: 'economy' },
+    { id: 'genre-10284', key: 'advice' },
+    { id: 'genre-10287', key: 'satire' },
+    { id: 'genre-10293', key: 'trueCrime' },
+    { id: 'genre-10020', key: 'nutrition' },
+    { id: 'genre-10285', key: 'travel' },
+    { id: 'genre-10022', key: 'history' },
+    { id: 'genre-10294', key: 'environment' },
   ],
   'pub-form-10010': [
     { id: 'genre-10019', key: 'drama' },
