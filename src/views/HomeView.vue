@@ -89,7 +89,7 @@ const logoOpacity = computed(() => {
             :key="episode.title"
             class="w-full sm:w-72"
           >
-            "episode" />
+            <EpisodeCard :episode="episode" />
           </div>
         </template>
         <template v-else>
