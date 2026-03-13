@@ -47,7 +47,13 @@ defineProps<{
         tabindex="0"
       >
         <span class="text-md">
-          {{ values.length > 0 ? values.map((v) => t(v.i18nKey)).join(', ') : placeholder }}
+          {{
+            values.length > 0
+              ? values.length <= 2
+                ? values.map((v) => t(v.i18nKey)).join(', ')
+                : `${values.slice(0, 2).map((v) => t(v.i18nKey)).join(', ')}, +${values.length - 2}`
+              : placeholder
+          }}
         </span>
         <ChevronDown class="size-5.5" />
       </ComboboxTrigger>
