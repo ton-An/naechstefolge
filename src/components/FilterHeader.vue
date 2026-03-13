@@ -23,18 +23,18 @@ const { t } = i18n.global
 const filterStore = useFilterStore()
 const episodesStore = useEpisodesStore()
 
-onMounted(() => {
-  filterStore.updateSelectedCategories(['pub-form-10003'])
-  filterStore.updateSelectedGenres(['all'])
-  applyFilters()
-})
-
 const applyFilters = () => {
   filterStore.resetIsModified()
   const selectedGenres = filterStore.getSelectedGenres
 
   episodesStore.getNewEpisodes(selectedGenres)
 }
+
+onMounted(() => {
+  filterStore.updateSelectedCategories(['pub-form-10003'])
+  filterStore.updateSelectedGenres(['all'])
+  applyFilters()
+})
 </script>
 
 <template>

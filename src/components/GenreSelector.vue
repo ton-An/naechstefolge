@@ -57,6 +57,8 @@ import type { CustomSelectorOption } from './CustomSelector/customSelectorOption
 
 const { t } = i18n.global
 
+const filterStore = useFilterStore()
+
 const options: Record<string, CustomSelectorOption> = {
   all: {
     i18nKey: 'common.all',
@@ -259,8 +261,6 @@ const options: Record<string, CustomSelectorOption> = {
     icon: Wand2,
   },
 }
-
-const filterStore = useFilterStore()
 
 const availableGenres: ComputedRef<CustomSelectorOption[]> = computed(() => {
   const availableGenresOptions = filterStore.state.availableGenres.map((key) => options[key]!)

@@ -18,23 +18,11 @@ import ZdfLogo from '@/components/ZdfLogo.vue'
 import i18n from '@/i18n/i18n'
 import { useEpisodesStore } from '@/stores/episodes_store/episodes_store'
 
-const episodesStore = useEpisodesStore()
-
 const { t } = i18n.global
 
+const episodesStore = useEpisodesStore()
+
 const scrollY = ref(0)
-
-const onScroll = () => {
-  scrollY.value = window.scrollY
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', onScroll, { passive: true })
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', onScroll)
-})
 
 // Blur starts at 50px scroll, maxes out at 500px scroll
 const logoBlur = computed(() => {
@@ -61,6 +49,18 @@ const logoOpacity = computed(() => {
   const end = 400
   const progress = Math.min(Math.max((scrollY.value - start) / (end - start), 0), 1)
   return 1 - progress
+})
+
+const onScroll = () => {
+  scrollY.value = window.scrollY
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
 })
 </script>
 
@@ -108,8 +108,6 @@ const logoOpacity = computed(() => {
         </template>
       </div>
     </div>
-    vor="i in10
   </div>
-  :key
   <div v-if="episodesStore.state.status === 'failure'" class="w-full sm:w-72">Failure</div>
 </template>

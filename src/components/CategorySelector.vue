@@ -28,6 +28,8 @@ import type { CustomSelectorOption } from './CustomSelector/customSelectorOption
 
 const { t } = i18n.global
 
+const filterStore = useFilterStore()
+
 const options: Record<string, CustomSelectorOption> = {
   all: {
     i18nKey: 'common.all',
@@ -70,8 +72,6 @@ const options: Record<string, CustomSelectorOption> = {
     icon: Palette,
   },
 }
-
-const filterStore = useFilterStore()
 
 const availableCategories = computed(() =>
   filterStore.state.availableCategories.map((category: string) => options[category]!),
