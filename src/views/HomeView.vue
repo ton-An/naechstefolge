@@ -2,7 +2,7 @@
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 
 import EpisodeCard from '@/components/EpisodeCard.vue'
-import FaqSection from '@/components/FaqSection.vue'
+import FaqButtonWithSheet from '@/components/FaqButtonWithSheet.vue'
 import FilterHeader from '@/components/FilterHeader.vue'
 import GradientBlob from '@/components/GradientBlob.vue'
 import ZdfLogo from '@/components/ZdfLogo.vue'
@@ -76,7 +76,7 @@ const logoOpacity = computed(() => {
   </div>
 
   <div class="fixed bottom-4 right-4 z-30">
-    <FaqSection />
+    <FaqButtonWithSheet />
   </div>
   <div v-if="episodesStore.state.status === 'loading'"></div>
   <div class="px-4 w-full z-10 mt-140 relative">
