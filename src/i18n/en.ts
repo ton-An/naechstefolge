@@ -72,6 +72,8 @@ const en: MessageSchema = {
     q4: 'Where can I find the source code?',
     a4: 'The project is open source and available on GitHub.',
     githubLink: 'View on GitHub',
+    impressum: 'Legal notice',
+    datenschutz: 'Privacy policy',
   },
 }
 

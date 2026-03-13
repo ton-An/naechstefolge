@@ -70,6 +70,8 @@ type MessageSchema = {
     q4: string
     a4: string
     githubLink: string
+    impressum: string
+    datenschutz: string
   }
 }
 

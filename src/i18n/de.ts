@@ -74,6 +74,8 @@ const de: MessageSchema = {
     q4: "Wo finde ich den Quellcode?",
     a4: "Das Projekt ist Open Source und auf GitHub verfügbar.",
     githubLink: "Auf GitHub ansehen",
+    impressum: "Impressum",
+    datenschutz: "Datenschutz",
   },
 };
 

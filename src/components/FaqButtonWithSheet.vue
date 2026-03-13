@@ -9,6 +9,7 @@ export default {}
 
 <script setup lang="ts">
 import { HelpCircle } from 'lucide-vue-next'
+import { RouterLink } from 'vue-router'
 
 import { Sheet, SheetDescription, SheetHeader, SheetTitle } from '@/components/ui/Sheet'
 import i18n from '@/i18n/i18n'
@@ -55,28 +56,45 @@ const faqItems = [
           {{ t(item.a) }}
         </p>
       </div>
-      <a
-        :href="GITHUB_URL"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline focus:outline-2 focus:outline-primary focus:outline-offset-8 rounded-sm"
-      >
-        {{ t('faq.githubLink') }}
-        <svg
-          class="size-4"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          aria-hidden="true"
+      <div class="mt-6 flex flex-col gap-4">
+        <a
+          :href="GITHUB_URL"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex w-fit items-center gap-2 text-sm font-medium text-primary hover:underline focus:outline-2 focus:outline-primary focus:outline-offset-8 rounded-sm"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-          />
-        </svg>
-      </a>
+          {{ t('faq.githubLink') }}
+          <svg
+            class="size-4"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        </a>
+
+        <div class="flex flex-wrap gap-4">
+          <RouterLink
+            to="/impressum"
+            class="text-sm font-medium text-primary hover:underline focus:outline-2 focus:outline-primary focus:outline-offset-8 rounded-sm"
+          >
+            {{ t('faq.impressum') }}
+          </RouterLink>
+          <RouterLink
+            to="/datenschutz"
+            class="text-sm font-medium text-primary hover:underline focus:outline-2 focus:outline-primary focus:outline-offset-8 rounded-sm"
+          >
+            {{ t('faq.datenschutz') }}
+          </RouterLink>
+        </div>
+      </div>
     </div>
   </Sheet>
 </template>
