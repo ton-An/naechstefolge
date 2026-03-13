@@ -50,7 +50,7 @@ const faqItems = [
         :href="GITHUB_URL"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+        class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline focus:outline-2 focus:outline-primary focus:outline-offset-8 rounded-sm"
       >
         {{ t('faq.githubLink') }}
         <svg
