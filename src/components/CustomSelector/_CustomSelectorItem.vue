@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { Check } from 'lucide-vue-next'
 import { ComboboxItem } from 'radix-vue'
-import { useI18n } from 'vue-i18n'
+
+import i18n from '@/i18n/i18n'
 
 import type { CustomSelectorOption } from './customSelectorOptions'
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 defineProps<{
   option: CustomSelectorOption
@@ -20,16 +21,10 @@ defineProps<{
     :value="option"
   >
     <div class="leading-none flex items-center cursor-pointer gap-2 relative select-none">
-      <component
-        :is="option.icon"
-        class="size-5.5"
-      />
+      <component :is="option.icon" class="size-5.5" />
       <span>{{ t(option.i18nKey) }}</span>
     </div>
 
-    <Check
-      v-if="isSelected"
-      class="size-4 text-orange-600"
-    />
+    <Check v-if="isSelected" class="size-4 text-orange-600" />
   </ComboboxItem>
 </template>

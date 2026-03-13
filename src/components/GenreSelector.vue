@@ -20,11 +20,16 @@ import {
   Music,
   Newspaper,
   Puzzle,
+  Rocket,
+  Scale,
   Shield,
   Siren,
+  Skull,
   Sparkles,
   Speech,
   Star,
+  Stethoscope,
+  Swords,
   Theater,
   Users,
   Utensils,
@@ -32,21 +37,16 @@ import {
   Volleyball,
   Wand2,
   Zap,
-  Skull,
-  Stethoscope,
-  Swords,
-  Scale,
-  Rocket,
 } from 'lucide-vue-next'
 import { computed, type ComputedRef } from 'vue'
-import { useI18n } from 'vue-i18n'
 
+import i18n from '@/i18n/i18n'
 import { useFilterStore } from '@/stores/filterStore/filterStore'
 
 import CustomSelector from './CustomSelector/CustomSelector.vue'
 import type { CustomSelectorOption } from './CustomSelector/customSelectorOptions'
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 const options: Record<string, CustomSelectorOption> = {
   all: {
@@ -279,7 +279,7 @@ const onValueUpdated = (values: CustomSelectorOption[]) => {
           : 'common.selectGenres',
       )
     "
-    :onValueUpdated="onValueUpdated"
+    :on-value-updated="onValueUpdated"
     :disabled="filterStore.state.selectedCategories.length === 0"
   />
 </template>

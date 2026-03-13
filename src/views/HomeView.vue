@@ -1,17 +1,17 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
-import { useI18n } from 'vue-i18n'
 
 import EpisodeCard from '@/components/EpisodeCard.vue'
 import FaqSection from '@/components/FaqSection.vue'
 import FilterHeader from '@/components/FilterHeader.vue'
 import GradientBlob from '@/components/GradientBlob.vue'
 import ZdfLogo from '@/components/ZdfLogo.vue'
+import i18n from '@/i18n/i18n'
 import { useEpisodesStore } from '@/stores/episodes_store/episodes_store'
 
 const episodesStore = useEpisodesStore()
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 const scrollY = ref(0)
 
@@ -57,26 +57,22 @@ const logoOpacity = computed(() => {
 
 <template>
   <div class="fixed top-25 left-[50%] translate-x-[-50%] -z-10 flex justify-center">
-    <GradientBlob class="absolute top-[50%] left-[50%] size-140 translate-x-[-50%] translate-y-[-50%]" />
+    <GradientBlob
+      class="absolute top-[50%] left-[50%] size-140 translate-x-[-50%] translate-y-[-50%]"
+    />
 
     <div
       class="hero-container-soft-edges inline-flex flex-col items-center justify-center gap-2 px-8 py-6 rounded-2xl backdrop-blur-sm transition-[filter] duration-200 relative"
       :style="{ filter: logoBlur, opacity: logoOpacity }"
     >
-
-      <ZdfLogo
-        class="w-55 relative z-1"
-        :style="{ opacity: logoOpacity }"
-      />
+      <ZdfLogo class="w-55 relative z-1" :style="{ opacity: logoOpacity }" />
       <h1
         class="hero-title text-[160px] -mt-13 text-center uppercase font-extrabold transition-opacity duration-200 whitespace-nowrap text-black/86 font-league-gothic leading-tight"
         :style="{ opacity: titleOpacity }"
       >
         {{ t('common.nextEpisode') }}
       </h1>
-
     </div>
-
   </div>
 
   <div class="fixed bottom-4 right-4 z-30">
@@ -89,24 +85,22 @@ const logoOpacity = computed(() => {
       <div class="flex flex-wrap gap-6 justify-center">
         <template v-if="episodesStore.state.status === 'success'">
           <div
-            class="w-full sm:w-72"
             v-for="episode in episodesStore.state.episodes"
             :key="episode.title"
+            class="w-full sm:w-72"
           >
-            <EpisodeCard :episode="episode" />
+            "episode" />
           </div>
         </template>
         <template v-else>
-          <div
-            class="w-full sm:w-72"
-            v-for="i in 10"
-            :key="i"
-          >
+          <div v-for="i in 10" :key="i" class="w-full sm:w-72">
             <EpisodeCard :episode="null" />
           </div>
         </template>
       </div>
     </div>
+    vor="i in10
   </div>
-  <div v-if="episodesStore.state.status === 'failure'">Failure</div>
+  :key
+  <div v-if="episodesStore.state.status === 'failure'" class="w-full sm:w-72">Failure</div>
 </template>

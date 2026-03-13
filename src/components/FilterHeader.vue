@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { Loader, LoaderCircle } from 'lucide-vue-next'
+import { LoaderCircle } from 'lucide-vue-next'
 import { onMounted } from 'vue'
-import { useI18n } from 'vue-i18n'
 
+import i18n from '@/i18n/i18n'
 import { useEpisodesStore } from '@/stores/episodes_store/episodes_store'
 import { useFilterStore } from '@/stores/filterStore/filterStore'
 
 import CategorySelector from './CategorySelector.vue'
 import GenreSelector from './GenreSelector.vue'
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 const filterStore = useFilterStore()
 const episodesStore = useEpisodesStore()
@@ -41,8 +41,8 @@ const applyFilters = () => {
       >
         <GenreSelector />
         <button
-          class="bg-orange-500 text-white px-4 py-2 rounded-lg min-w-32 flex items-center justify-center gap-2 focus:outline-2 focus:outline-primary focus:outline-offset-2"
           v-if="filterStore.state.isModified || episodesStore.state.status === 'loading'"
+          class="bg-orange-500 text-white px-4 py-2 rounded-lg min-w-32 flex items-center justify-center gap-2 focus:outline-2 focus:outline-primary focus:outline-offset-2"
           @click="applyFilters"
         >
           <LoaderCircle

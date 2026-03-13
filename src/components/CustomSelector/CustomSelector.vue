@@ -12,12 +12,13 @@ import {
   ComboboxTrigger,
   ComboboxViewport,
 } from 'radix-vue'
-import { useI18n } from 'vue-i18n'
+
+import i18n from '@/i18n/i18n'
 
 import CustomSelectorItem from './_CustomSelectorItem.vue'
 import type { CustomSelectorOption } from './customSelectorOptions'
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 defineProps<{
   options: CustomSelectorOption[]
@@ -39,10 +40,7 @@ defineProps<{
     <ComboboxAnchor
       class="min-w-50 inline-flex items-center justify-between rounded-lg leading-none bg-white/60 backdrop-blur-3xl"
     >
-      <ComboboxInput
-        class="sr-only"
-        aria-hidden="true"
-      />
+      <ComboboxInput class="sr-only" aria-hidden="true" />
       <ComboboxTrigger
         class="flex items-center justify-between w-full gap-3 px-3.5 py-2.5 disabled:cursor-not-allowed disabled:opacity-50 rounded-lg focus:outline-2 focus:outline-primary focus:outline-offset-2"
         :disabled="disabled"
@@ -64,7 +62,7 @@ defineProps<{
 
           <CustomSelectorItem
             :option="{ id: 'all', i18nKey: 'common.all', icon: List }"
-            :isSelected="values.some((v) => v.id === 'all')"
+            :is-selected="values.some((v) => v.id === 'all')"
           />
           <ComboboxSeparator class="h-0.5 bg-gray-500/40 mb-4" />
           <ComboboxGroup>
@@ -72,7 +70,7 @@ defineProps<{
               v-for="option in options"
               :key="option.id"
               :option="option"
-              :isSelected="values.some((v) => v.id === option.id)"
+              :is-selected="values.some((v) => v.id === option.id)"
             />
           </ComboboxGroup>
         </ComboboxViewport>

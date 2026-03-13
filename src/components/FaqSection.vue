@@ -1,15 +1,10 @@
 <script setup lang="ts">
 import { HelpCircle } from 'lucide-vue-next'
-import { useI18n } from 'vue-i18n'
 
-import {
-  Sheet,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-} from '@/components/ui/Sheet'
+import { Sheet, SheetDescription, SheetHeader, SheetTitle } from '@/components/ui/Sheet'
+import i18n from '@/i18n/i18n'
 
-const { t } = useI18n()
+const { t } = i18n.global
 
 const GITHUB_URL = 'https://github.com/ton-An/meine-naechste-doku'
 
@@ -33,46 +28,46 @@ const faqItems = [
       </button>
     </template>
     <SheetHeader>
-        <SheetTitle>{{ t('faq.title') }}</SheetTitle>
-        <SheetDescription>
-          {{ t('faq.description') }}
-        </SheetDescription>
-      </SheetHeader>
-      <div class="mt-6 space-y-6">
-        <div
-          v-for="(item, i) in faqItems"
-          :key="i"
-          class="border-b border-gray-200 pb-4 last:border-0 last:pb-0"
-        >
-          <h3 class="font-semibold text-gray-900">
-            {{ t(item.q) }}
-          </h3>
-          <p class="mt-2 text-sm leading-relaxed text-gray-600">
-            {{ t(item.a) }}
-          </p>
-        </div>
-        <a
-          :href="GITHUB_URL"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-        >
-          {{ t('faq.githubLink') }}
-          <svg
-            class="size-4"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
-        </a>
+      <SheetTitle>{{ t('faq.title') }}</SheetTitle>
+      <SheetDescription>
+        {{ t('faq.description') }}
+      </SheetDescription>
+    </SheetHeader>
+    <div class="mt-6 space-y-6">
+      <div
+        v-for="(item, i) in faqItems"
+        :key="i"
+        class="border-b border-gray-200 pb-4 last:border-0 last:pb-0"
+      >
+        <h3 class="font-semibold text-gray-900">
+          {{ t(item.q) }}
+        </h3>
+        <p class="mt-2 text-sm leading-relaxed text-gray-600">
+          {{ t(item.a) }}
+        </p>
       </div>
+      <a
+        :href="GITHUB_URL"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-6 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+      >
+        {{ t('faq.githubLink') }}
+        <svg
+          class="size-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+          />
+        </svg>
+      </a>
+    </div>
   </Sheet>
 </template>
