@@ -38,7 +38,7 @@ const sideClasses = computed(() => {
 
 <template>
   <DialogRoot v-bind="$attrs">
-    <DialogTrigger>
+    <DialogTrigger as-child>
       <slot name="trigger" />
     </DialogTrigger>
     <DialogPortal>

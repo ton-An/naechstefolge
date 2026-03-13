@@ -40,7 +40,7 @@ defineProps<{
     <ComboboxAnchor
       class="min-w-50 inline-flex items-center justify-between rounded-lg leading-none bg-white/60 backdrop-blur-3xl"
     >
-      <ComboboxInput class="sr-only" aria-hidden="true" />
+      <ComboboxInput class="sr-only" aria-hidden="true" tabindex="-1" />
       <ComboboxTrigger
         class="flex items-center justify-between w-full gap-3 px-3.5 py-2.5 disabled:cursor-not-allowed disabled:opacity-50 rounded-lg focus:outline-2 focus:outline-primary focus:outline-offset-2"
         :disabled="disabled"
