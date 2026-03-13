@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import { BookMarked, Clapperboard, Film, List, Newspaper, SearchIcon, Tv, Palette } from 'lucide-vue-next'
+import {
+  BookMarked,
+  Clapperboard,
+  Film,
+  List,
+  Newspaper,
+  Palette,
+  SearchIcon,
+  Tv,
+} from 'lucide-vue-next'
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -72,7 +81,7 @@ const onValueUpdated = (value: CustomSelectorOption[]) => {
     :options="availableCategories"
     :values="selectedCategories"
     :placeholder="t('common.selectCategories')"
-    :onValueUpdated="onValueUpdated"
+    :on-value-updated="onValueUpdated"
     :disabled="false"
   />
 </template>
