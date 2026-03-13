@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * GenreSelector
+ *
+ * Genre multi-select. Maps filter store genres to CustomSelector options.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import {
   Backpack,

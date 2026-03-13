@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * ZdfAnimatedLogo
+ *
+ * Animated ZDF logo for splash. Circle and letter animations.
+ */
+export default {}
+</script>
+
 <template>
   <div class="buffering-3_qfLY svelte-1wxlmwd">
     <svg

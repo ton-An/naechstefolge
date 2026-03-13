@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SheetDescription
+ *
+ * Sheet description. Wraps Radix DialogDescription.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { DialogDescription } from 'radix-vue'
 import { cn } from '@/lib/utils'

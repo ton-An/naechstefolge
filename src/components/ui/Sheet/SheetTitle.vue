@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SheetTitle
+ *
+ * Sheet title. Wraps Radix DialogTitle.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { DialogTitle } from 'radix-vue'
 import { cn } from '@/lib/utils'

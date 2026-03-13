@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SheetFooter
+ *
+ * Sheet footer. Flex layout for action buttons.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
 

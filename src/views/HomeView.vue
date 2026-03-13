@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * HomeView
+ *
+ * Main home view. Hero with ZDF logo, gradient blob, filter header, episode grid, and FAQ button. Scroll-based blur/opacity effects.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 

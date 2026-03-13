@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * CustomSelectorItem
+ *
+ * Single option item for CustomSelector. Shows icon, label, and check when selected.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { Check } from 'lucide-vue-next'
 import { ComboboxItem } from 'radix-vue'

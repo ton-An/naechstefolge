@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * CategorySelector
+ *
+ * Category multi-select. Maps filter store categories to CustomSelector options.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import {
   BookMarked,

@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * Sheet
+ *
+ * Slide-out sheet/drawer. Wraps Radix Dialog with configurable side (top/right/bottom/left).
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import {
   DialogClose,

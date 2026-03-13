@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * FilterHeader
+ *
+ * Filter bar with category and genre selectors. Applies filters to fetch episodes.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { LoaderCircle } from 'lucide-vue-next'
 import { onMounted } from 'vue'

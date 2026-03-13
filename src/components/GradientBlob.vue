@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * GradientBlob
+ *
+ * Animated gradient blob background. Morphing shape with red-orange gradient.
+ */
+export default {}
+</script>
+
 <template>
   <div class="shape blur-xl opacity-20">
     <!-- ko here -->

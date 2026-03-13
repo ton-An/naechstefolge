@@ -1,3 +1,14 @@
+
+
+<script lang="ts">
+/**
+ * EpisodeCard
+ *
+ * Card for a single episode. Shows image, title, date, duration. Renders shimmer skeleton when episode is null.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import type { Episode } from '@/stores/episodes_store/episodes_state'
 

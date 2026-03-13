@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * CustomSelector
+ *
+ * Reusable multi-select combobox. Uses Radix Combobox with options, values, placeholder, and callback.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { ChevronDown, List } from 'lucide-vue-next'
 import {

@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SheetClose
+ *
+ * Sheet close button. Wraps Radix DialogClose.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { DialogClose, Slot } from 'radix-vue'
 </script>

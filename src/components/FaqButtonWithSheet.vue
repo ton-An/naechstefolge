@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * FaqButtonWithSheet
+ *
+ * FAQ button that opens a right-side sheet with FAQ items and GitHub link.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { HelpCircle } from 'lucide-vue-next'
 

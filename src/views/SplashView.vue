@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SplashView
+ *
+ * Splash screen with animated ZDF logo. Handles scroll lock during splash and fades out over 3.3s.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from 'vue'
 import { RouterView } from 'vue-router'

@@ -1,3 +1,12 @@
+<script lang="ts">
+/**
+ * SheetHeader
+ *
+ * Sheet header container. Flex layout for title and description.
+ */
+export default {}
+</script>
+
 <script setup lang="ts">
 import { cn } from '@/lib/utils'
 
