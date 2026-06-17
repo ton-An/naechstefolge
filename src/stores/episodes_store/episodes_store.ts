@@ -37,7 +37,10 @@ export const useEpisodesStore = defineStore('episodes', {
       for (const smartCollection of smartCollections) {
         if ('video' in smartCollection && smartCollection.video) {
           const video = smartCollection.video
-          const visibleFrom = video['availability']?.['vod']?.['visibleFrom']
+          const visibleFrom =
+            video['availability']?.['vod']?.['visibleFrom'] ??
+            video['editorialDate'] ??
+            video['publicationDate']
           if (visibleFrom) {
             episodes.push({
               title: video['title'],
@@ -53,7 +56,10 @@ export const useEpisodesStore = defineStore('episodes', {
           const episodesOfSeason = seasons[0]['episodes']['nodes']
 
           for (const episode of episodesOfSeason) {
-            const visibleFrom = episode['availability']?.['vod']?.['visibleFrom']
+            const visibleFrom =
+              episode['availability']?.['vod']?.['visibleFrom'] ??
+              episode['editorialDate'] ??
+              episode['publicationDate']
             if (!visibleFrom) continue
             episodes.push({
               title: episode['title'],
@@ -183,6 +189,8 @@ const FRAGMENTS = `
   fragment VideoFragment on Video {
     title
     sharingUrl
+    editorialDate
+    publicationDate
     availability {
       vod {
         visibleFrom
